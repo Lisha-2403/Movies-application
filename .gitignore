@@ -41,4 +41,4 @@ testem.log
 .DS_Store
 Thumbs.db
 # Environment secret (API keys)
-src/environments/environment.secret.tsgit add .
+src/environments/environment.secret.ts
