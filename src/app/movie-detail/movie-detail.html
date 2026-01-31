@@ -1,0 +1,29 @@
+<div *ngIf="loading">
+  Loading movie details...
+</div>
+
+<div *ngIf="movie" class="movie-detail">
+  <!-- Poster -->
+  <div class="movie-poster">
+    <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" 
+         alt="{{ movie.title }}" />
+  </div>
+
+  <!-- Details -->
+  <div class="movie-info">
+    <h3>{{ movie.title }}</h3>
+    <p class="overview-text">{{ movie.overview }}</p>
+
+    <p><strong>Release Date:</strong> <span>{{ movie.release_date }}</span></p>
+    <p><strong>Language:</strong> <span>{{ movie.original_language | uppercase }}</span></p>
+    <p><strong>Revenue:</strong> <span>{{ movie.revenue | currency }}</span></p>
+    <p><strong>Director:</strong> <span>{{ movie.director }}</span></p>
+
+    <div class="cast-list">
+      <strong>Cast:</strong>
+      <ul>
+        <li *ngFor="let actor of movie.cast">{{ actor }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

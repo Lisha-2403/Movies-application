@@ -1,0 +1,9 @@
+.title {
+  font-family: 'Arial', sans-serif; /* Clean, modern font */
+  font-size: 2rem;                  /* Large title */
+  font-weight: bold;                /* Bold text */
+  color: #ff3c00;                   /* Eye-catching color */
+  text-align: center;               /* Centered on page */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle shadow */
+  margin: 20px 0;                   /* Space above and below */
+}

@@ -1,0 +1,82 @@
+/* Container: Modernized with a dark, sleek background vibe */
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f9d1d1c5; /* Dark mode is essential */
+}
+
+/* Card: Glassmorphism effect */
+.movie-card {
+  width: 260px;
+  background: rgb(11, 7, 7);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px); /* Frosty glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px; /* Softer, rounder corners */
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hover: Lift and Glow */
+.movie-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(222, 147, 183, 0.25);
+  border: 1px solid rgba(222, 147, 183, 0.5);
+}
+
+/* Image: Slight zoom on hover */
+.movie-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Typography: Bold and expressive */
+.movie-card h2 {
+  font-family: 'Inter', sans-serif; /* Modern sans-serif */
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin: 15px 15px 5px;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.release {
+  margin: 0 15px 10px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Genre Chips: Neon/Gradient style */
+.genre-list {
+  padding: 0 15px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.genre-list span {
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  color: #000;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px; /* Pill shape */
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}

@@ -1,0 +1,11 @@
+<div class="movie-container">
+  <div *ngFor="let movie of movies" class="movie-card" (click)="openDetails(movie)">
+    <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
+    <h2>{{ movie.title }}</h2>
+    <p class="release">Release: {{ movie.release_date }}</p>
+    <p *ngIf="movie.genre_ids?.length" class="genre-list">
+      <span *ngFor="let genre of movie.genre_ids">{{ genre | genreName }}</span>
+    </p>
+ 
+  </div>
+</div>
